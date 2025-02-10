@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "49a65a07-bfe2-4353-9708-4c8d026921ed",
+		"name": "Gestor Academico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956952"
+	},
+	"item": [
+		{
+			"name": "Autenticación",
+			"item": [
+				{
+					"name": "Register/ STUDENT_ROLE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Alice",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Johnson",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "alice123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "alice@student.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass123!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "STUDENT_ROLE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register/ TEACHER_ROLE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Bob",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Williams",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "bobteacher",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "bob@teacher.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass123!",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9876543210",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "TEACHER_ROLE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login/ STUDENT_ROLE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "alice@student.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass123!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login/ TEACHER_ROLE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "bob@teacher.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass123!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test/ STUDENT_ROLE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE4ZmZjOWQzMWYxMDQzODJiNjQiLCJ1c2VybmFtZSI6ImFsaWNlMTIzIiwibmFtZSI6IkFsaWNlIiwicm9sZSI6IlNUVURFTlRfUk9MRSIsImlhdCI6MTczOTE2NTQ1NSwiZXhwIjoxNzM5MTc2MjU1fQ.-ah0hYvAOAlyyhD-Iph8Allh6GV7EvRkdcX6yuzp8Yc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2069/api/auth/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"auth",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test/ TEACHER_ROLE",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE5MmZjOWQzMWYxMDQzODJiNjkiLCJ1c2VybmFtZSI6ImJvYnRlYWNoZXIiLCJuYW1lIjoiQm9iIiwicm9sZSI6IlRFQUNIRVJfUk9MRSIsImlhdCI6MTczOTE2NTQ2NCwiZXhwIjoxNzM5MTc2MjY0fQ.vnIW2AYR5_6elQ8W6IPjK-cFzQpt14a3nYh_uDVbzU4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2069/api/auth/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"auth",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2069/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2069/api/users/67a98a92fc9d31f104382b69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"users",
+								"67a98a92fc9d31f104382b69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit/Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE4ZmZjOWQzMWYxMDQzODJiNjQiLCJ1c2VybmFtZSI6ImFsaWNlMTIzIiwibmFtZSI6IkFsaWNlIiwicm9sZSI6IlNUVURFTlRfUk9MRSIsImlhdCI6MTczOTE2NTQ1NSwiZXhwIjoxNzM5MTc2MjU1fQ.-ah0hYvAOAlyyhD-Iph8Allh6GV7EvRkdcX6yuzp8Yc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "alice_updated",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "alice.updated@student.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/users/67a98a8ffc9d31f104382b64",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"users",
+								"67a98a8ffc9d31f104382b64"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit/Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE5MmZjOWQzMWYxMDQzODJiNjkiLCJ1c2VybmFtZSI6ImJvYnRlYWNoZXIiLCJuYW1lIjoiQm9iIiwicm9sZSI6IlRFQUNIRVJfUk9MRSIsImlhdCI6MTczOTE2NTQ2NCwiZXhwIjoxNzM5MTc2MjY0fQ.vnIW2AYR5_6elQ8W6IPjK-cFzQpt14a3nYh_uDVbzU4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "bob_updated",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "bob.updated@teacher.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/users/67a98a92fc9d31f104382b69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"users",
+								"67a98a92fc9d31f104382b69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Password/Student",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE4ZmZjOWQzMWYxMDQzODJiNjQiLCJ1c2VybmFtZSI6ImFsaWNlMTIzIiwibmFtZSI6IkFsaWNlIiwicm9sZSI6IlNUVURFTlRfUk9MRSIsImlhdCI6MTczOTE2NTQ1NSwiZXhwIjoxNzM5MTc2MjU1fQ.-ah0hYvAOAlyyhD-Iph8Allh6GV7EvRkdcX6yuzp8Yc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "StrongPass123!",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "NewStrongPass123!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/users/67a98a8ffc9d31f104382b64/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"users",
+								"67a98a8ffc9d31f104382b64",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Password/Teacher",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE5MmZjOWQzMWYxMDQzODJiNjkiLCJ1c2VybmFtZSI6ImJvYnRlYWNoZXIiLCJuYW1lIjoiQm9iIiwicm9sZSI6IlRFQUNIRVJfUk9MRSIsImlhdCI6MTczOTE2NTQ2NCwiZXhwIjoxNzM5MTc2MjY0fQ.vnIW2AYR5_6elQ8W6IPjK-cFzQpt14a3nYh_uDVbzU4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "currentPassword",
+									"value": "StrongPass123!",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "NewStrongPass123!",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/users/67a98a92fc9d31f104382b69/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"users",
+								"67a98a92fc9d31f104382b69",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2069/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:2069/api/courses/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"courses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AsignarseUnCurso Students",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE4ZmZjOWQzMWYxMDQzODJiNjQiLCJ1c2VybmFtZSI6ImFsaWNlMTIzIiwibmFtZSI6IkFsaWNlIiwicm9sZSI6IlNUVURFTlRfUk9MRSIsImlhdCI6MTczOTE2NTQ1NSwiZXhwIjoxNzM5MTc2MjU1fQ.-ah0hYvAOAlyyhD-Iph8Allh6GV7EvRkdcX6yuzp8Yc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2069/api/students/67a98a8ffc9d31f104382b64/courses/67a993bf48bf19c2ef04dbb4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"students",
+								"67a98a8ffc9d31f104382b64",
+								"courses",
+								"67a993bf48bf19c2ef04dbb4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerCursosAsignadosStudent",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5OGE5MmZjOWQzMWYxMDQzODJiNjkiLCJ1c2VybmFtZSI6ImJvYnRlYWNoZXIiLCJuYW1lIjoiQm9iIiwicm9sZSI6IlRFQUNIRVJfUk9MRSIsImlhdCI6MTczOTE2NTQ2NCwiZXhwIjoxNzM5MTc2MjY0fQ.vnIW2AYR5_6elQ8W6IPjK-cFzQpt14a3nYh_uDVbzU4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Curso de Física",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Aprenderás sobre mecánica y termodinámica.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2069/api/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2069",
+							"path": [
+								"api",
+								"courses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
